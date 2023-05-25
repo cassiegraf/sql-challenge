@@ -1,2 +1,3 @@
 # sql-challenge
-module 9 assignment
+## Path to code
+# main branch --> EmployeeSQL --> employee_data.sql
