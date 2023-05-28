@@ -12,7 +12,8 @@ emp_no PK INT FK - employees.emp_no #NOT NULL
 #employee in each dept
 dept_emp
 -
-emp_no PK INT FK - employees.emp_no #NOT NULL
+id SERIAL PK
+emp_no INT FK >-< employees.emp_no #NOT NULL
 dept_no VARCHAR(25) FK >- departments.dept_no #NOT NULL
 
 employees
