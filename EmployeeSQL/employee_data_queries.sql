@@ -1,5 +1,5 @@
 --List the employee number, last name, first name, sex, and salary of each employee.
-SELECT employees.emp_no AS "Employee Name", 
+SELECT employees.emp_no AS "Employee Number", 
 	employees.last_name AS "Employee Last Name", 
 	employees.first_name AS "Employee First Name", 
 	employees.sex AS "Employee Sex", 
@@ -51,17 +51,11 @@ dept_emp.dept_no = departments.dept_no
 
 --List first name, last name, and sex of each employee 
 --whose first name is Hercules and whose last name begins with the letter B.
-SELECT first_name AS "First Name", 
-	last_name AS "Last Name", 
-	sex As "Sex"
-FROM employees
-WHERE first_name IN
-	(
-	SELECT first_name
-	FROM employees
-	WHERE first_name = 'Hercules'
-	)	
-;
+SELECT first_name, last_name, sex FROM employees
+WHERE
+first_name = 'Hercules'
+AND
+last_name LIKE 'B%';
 
 --List each employee in the Sales department, including their employee number, last name, and first name.
 SELECT employees.emp_no AS "Employee Number", 
